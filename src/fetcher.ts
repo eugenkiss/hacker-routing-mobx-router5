@@ -3,21 +3,8 @@ import {PromiseState} from 'mobx-utils/lib/from-promise'
 import {action, IObservableValue, observable, when} from 'mobx'
 import {failedReq, fulfilledReq, getNow} from './utils'
 
-export function fetcher<T, I=undefined>(promiseMaker: (input: I) => Promise<T>)
-: I extends undefined ? FetcherWithoutInput<T> : FetcherWithInput<T, I> {
+export function fetcher<T, I=undefined>(promiseMaker: (input: I) => Promise<T>): Fetcher<T, I>  {
   return new Fetcher<T, I>(promiseMaker) as any
-}
-
-interface FetcherWithoutInput<T> extends Fetcher<T> {
-  fetch(): IPromiseBasedObservable<T>
-  fetchWith(wrapper: (p: Promise<T>) => Promise<T>): IPromiseBasedObservable<T>
-  valueOrFetch(): T
-}
-
-interface FetcherWithInput<T, I> extends Fetcher<T, I> {
-  fetch(input: I): IPromiseBasedObservable<T>
-  fetchWith(wrapper: (p: Promise<T>) => Promise<T>, input: I): IPromiseBasedObservable<T>
-  valueOrFetch(input: I): T
 }
 
 class Fetcher<T, I=void> {
