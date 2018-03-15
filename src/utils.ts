@@ -13,12 +13,6 @@ export const failedReq: IPromiseBasedObservable<any> = {
   then: () => null,
 }
 
-export function joinPathnames(p1: string, p2: string) {
-  if (p2 == null || p2 === '') return p1
-  const joined = `${p1}/${p2}`
-  return joined.replace(/\/\/+/g, '/')
-}
-
 export function sleep(time) {
   return new Promise(resolve => {
     setTimeout(resolve, time)
