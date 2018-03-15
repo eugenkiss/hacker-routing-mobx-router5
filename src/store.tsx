@@ -3,7 +3,7 @@ import {DoneFn, NavigationOptions} from 'router5'
 import {makeMobxRouter} from './router'
 import {FeedRoute, LinkData, routes} from './routes'
 import {fulfilledReq} from './utils'
-import {fetcher} from './req'
+import {fetcher} from './fetcher'
 import {ApiClient} from './api-client'
 import {FeedItem, FeedType, Story} from './models'
 

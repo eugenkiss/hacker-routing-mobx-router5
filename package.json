@@ -4,15 +4,13 @@
   "private": true,
   "devDependencies": {
     "@types/react": "^16.0.40",
-    "@types/react-dom": "^16.0.4",
-    "babel-runtime": "^6.26.0",
-    "parcel-bundler": "^1.6.2",
-    "typescript": "^2.8.0-dev.20180314"
+    "@types/react-dom": "^16.0.4"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.4",
     "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "@fortawesome/react-fontawesome": "0.0.17",
+    "babel-runtime": "^6.26.0",
     "emotion": "^9.0.2",
     "emotion-theming": "^9.0.0",
     "mobx": "^4.0.0",
@@ -20,13 +18,15 @@
     "mobx-utils": "^4.0.0",
     "npm": "^5.7.1",
     "nprogress": "^0.2.0",
+    "parcel-bundler": "^1.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-emotion": "^9.0.2",
     "router5": "^5.8.3",
     "serializr": "^1.1.14",
     "styled-system": "^2.2.1",
-    "tslib": "^1.9.0"
+    "tslib": "^1.9.0",
+    "typescript": "^2.8.0-dev.20180314"
   },
   "scripts": {
     "start": "parcel src/index.html"
